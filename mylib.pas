@@ -10,9 +10,7 @@ uses
 type Tcharbuf= array [0..$ffff] of char;
      TSetOfChar=set of char;
 
-
 const Delimiters = [' ',',','.',':',';','!','?','$','#','^','%','@','*','(',')','-','+','=','/','\','|','"','&', #09];
-
 
 function fun_SetNull(a,b: byte): byte; //Установить ноль в заданный бит
 function fun_SetOne(a,b: byte): byte; //Установить единицу в заданный бит
@@ -33,10 +31,6 @@ function fun_ModPos ( Ch:TsetOfChar; st:string): integer; // Модифицир�
 function fun_ParsStr(st: string): tstringlist;  //Разбор строки на элементы массива 
 function fun_Binary(num: integer): string; // Функция вывода введенного числа в бинарном виде
 function fun_GetWordByNum(st: string; n: integer): string; //Взять из строки элемент по номеру 
-
-
-
-
 
 implementation
 
@@ -330,9 +324,4 @@ function fun_StrFromText(filename: string;n:integer): string;
     sl.LoadFromFile(filename);
     result:=sl[n];
 end;
-
-
-
-
 end.
-
